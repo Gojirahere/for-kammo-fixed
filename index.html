@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>September, somehow. — For Kammo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<div id="webgl"></div>
+<div id="butterflyCanvasWrap"><canvas id="butterflyCanvas"></canvas></div>
+<div class="progress-bar" id="progress"></div>
+<div class="hint">tap · swipe · open the photos</div>
+<div id="sceneCounter">01 / 10</div>
+<div id="toast"></div>
+
+<div id="lightbox">
+  <button id="closeLb" aria-label="Close">×</button>
+  <img id="lightboxImg" src="" alt="Memory">
+  <div id="lightboxCap"></div>
+</div>
+
+<div class="scene active" data-index="0">
+  <div class="intro-content">
+    <div class="eyebrow">A little world made for one person</div>
+    <h1 class="title">September,<br><em>somehow.</em></h1>
+    <p class="lead">Some stories arrive loudly. Ours didn’t. It slipped into an ordinary month, stayed a little longer than expected, and somehow became something worth making a whole little universe for.</p>
+    <button class="enter-btn" data-next>Enter the story →</button>
+  </div>
+  <div class="dedication">For the girl<br>who made September mean something</div>
+</div>
+
+<div class="scene" data-index="1"><div class="scene-inner">
+<h2>Before everything</h2><p>You already had your own quiet world. The way you spoke about the things you loved, the past you carried without making it heavy, the small rituals that were only yours. I just wanted to be allowed inside.</p>
+<button class="btn" data-next>Continue</button></div></div>
+
+<div class="scene" data-index="2"><div class="scene-inner">
+<h2>The ordinary days</h2><p>The way you still get excited over the things you care about. How you remember tiny details most people forget. The soft way you exist when you think no one is watching. Those are the things that stayed.</p>
+<button class="btn" data-next>Next</button></div></div>
+
+<div class="scene" data-index="3"><div class="scene-inner gallery-inner">
+<h2>Pieces of her</h2><p class="gallery-note">Drag to spin · tap any photo to open</p>
+<div id="photoStage"></div>
+<button class="btn" data-next>Continue</button></div></div>
+
+<div class="scene" data-index="4"><div class="scene-inner">
+<h2>Things from before</h2><p>The version of you that existed before me still lives in the way you laugh at old stories, the way certain places still feel like home to you, the quiet strength you already had. I never wanted to change any of it. Only to appreciate it.</p>
+<button class="btn" data-next>Next</button></div></div>
+
+<div class="scene" data-index="5"><div class="scene-inner">
+<h2>Things I keep noticing</h2>
+<div class="comfort-row">
+<span class="comfort" data-msg="The things you loved long before we met are still part of what makes you you.">past</span>
+<span class="comfort" data-msg="You carry old memories gently, and I hope you always keep that softness.">soft</span>
+<span class="comfort" data-msg="The tiny habits that are only yours are the ones I remember most.">hers</span>
+<span class="comfort" data-msg="You made an ordinary September feel like the beginning of something beautiful.">true</span>
+</div>
+<div id="comfortMessage"></div><button class="btn" data-next>Continue</button></div></div>
+
+<div class="scene" data-index="6"><div class="scene-inner">
+<h2>This is for you</h2><p>A lotus that opens for the girl who made the month mean something.<br>Watch it bloom.</p>
+<button class="btn" data-next>Open the lotus</button></div></div>
+
+<div class="scene lotus-scene" data-index="7" id="lotusScene">
+<div class="lotus-copy"><p>for Kammo — one month<br><span>tap the flower to bloom again</span></p></div>
+<button id="bloomAgain" class="bloom-btn">BLOOM ✦</button>
+</div>
+
+<div class="scene" data-index="8"><div class="scene-inner">
+<h2>Happy one month</h2><p>I love the girl you were before me.<br>I love the girl you are with me.<br>And I already love whoever you’re still becoming.</p>
+<button class="btn" data-next>One last thing</button></div></div>
+
+<div class="scene" data-index="9"><div class="scene-inner">
+<h2 class="final-title">September,<br><em>somehow.</em></h2>
+<p class="final-copy">Thank you for letting me into the little world that was already yours.<br><br>One month down. I still choose you.</p>
+<button class="btn" id="replay">Replay the story</button></div></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="./script.js"></script>
+</body>
+</html>
